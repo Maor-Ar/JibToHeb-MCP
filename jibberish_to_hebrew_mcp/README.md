@@ -1,0 +1,46 @@
+# jibberish-to-hebrew-mcp
+
+MCP server that converts text between “gibberish” English and Hebrew by swapping characters according to the **QWERTY ↔ Hebrew (SI 1452)** keyboard layout.
+
+## Tools
+
+- **qwerty_to_hebrew_text** — Converts English-looking gibberish (typed with Hebrew in mind but keyboard set to English) to Hebrew.
+- **hebrew_to_qwerty_text** — Converts Hebrew text to the equivalent QWERTY key sequence.
+
+## Install and run
+
+```bash
+pip install jibberish-to-hebrew-mcp
+jibberish-to-hebrew-mcp
+```
+
+Or with [uv](https://github.com/astral-sh/uv):
+
+```bash
+uvx jibberish-to-hebrew-mcp
+```
+
+## Cursor / Claude config
+
+Add to your MCP config (e.g. `~/.cursor/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "jibberish-to-hebrew": {
+      "command": "jibberish-to-hebrew-mcp",
+      "args": []
+    }
+  }
+}
+```
+
+If the command is not on PATH, use the full path to the script or `uvx jibberish-to-hebrew-mcp` (with `"command": "uvx"`, `"args": ["jibberish-to-hebrew-mcp"]`).
+
+---
+
+### MCP Registry (optional)
+
+To publish this server to the [official MCP Registry](https://modelcontextprotocol.io/registry/quickstart), the README must contain the server name below (used for ownership verification).
+
+<!-- mcp-name: io.github.Maor-Ar/jibberish-to-hebrew -->

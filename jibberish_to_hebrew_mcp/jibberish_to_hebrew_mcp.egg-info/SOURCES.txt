@@ -1,0 +1,10 @@
+README.md
+keyboard_map.py
+pyproject.toml
+server.py
+jibberish_to_hebrew_mcp.egg-info/PKG-INFO
+jibberish_to_hebrew_mcp.egg-info/SOURCES.txt
+jibberish_to_hebrew_mcp.egg-info/dependency_links.txt
+jibberish_to_hebrew_mcp.egg-info/entry_points.txt
+jibberish_to_hebrew_mcp.egg-info/requires.txt
+jibberish_to_hebrew_mcp.egg-info/top_level.txt

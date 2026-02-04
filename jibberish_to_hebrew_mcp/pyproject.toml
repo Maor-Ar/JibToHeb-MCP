@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jibberish-to-hebrew-mcp"
+version = "0.1.0"
+description = "MCP server: convert QWERTY gibberish to Hebrew and vice versa by keyboard layout mapping"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+jibberish-to-hebrew-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server", "keyboard_map"]
+
+[tool.uv]
+dev-dependencies = []

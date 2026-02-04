@@ -1,0 +1,11 @@
+---
+description: Use Jibberish–Hebrew MCP for layout conversion
+globs: *.md, *.txt
+---
+
+When the user shares text that looks like English gibberish but might be Hebrew typed on an English keyboard (or vice versa), use the MCP tools:
+
+- **qwerty_to_hebrew_text(text)** — Convert gibberish English → Hebrew (same key positions, SI 1452 layout).
+- **hebrew_to_qwerty_text(text)** — Convert Hebrew → QWERTY key sequence (reverse mapping).
+
+Prefer these tools over guessing or manual character replacement.

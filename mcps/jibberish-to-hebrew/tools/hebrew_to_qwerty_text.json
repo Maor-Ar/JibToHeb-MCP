@@ -1,0 +1,15 @@
+{
+  "name": "hebrew_to_qwerty_text",
+  "description": "Convert Hebrew text to the equivalent QWERTY key sequence by swapping each Hebrew character to its counterpart on the US QWERTY keyboard layout. Use when someone typed English but their keyboard was set to Hebrew.",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "The Hebrew text (or mixed) to convert to QWERTY key equivalents"
+      }
+    },
+    "required": ["text"],
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

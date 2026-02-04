@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Maor-Ar/jibberish-to-hebrew",
+  "title": "Jibberish to Hebrew",
+  "description": "Convert QWERTY gibberish to Hebrew and Hebrew to QWERTY by SI 1452 keyboard layout mapping. Two tools: qwerty_to_hebrew_text, hebrew_to_qwerty_text.",
+  "repository": {
+    "url": "https://github.com/Maor-Ar/JibToHeb-MCP",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "jibberish-to-hebrew-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
