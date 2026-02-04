@@ -1,0 +1,36 @@
+# Publish jibberish-to-hebrew-mcp to PyPI (trusted publishing, no token).
+# One-time setup on PyPI: add trusted publisher for this repo + workflow.
+name: Publish to PyPI
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  pypi:
+    name: Build and publish to PyPI
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build
+        run: pip install build
+
+      - name: Build package
+        run: |
+          cd jibberish_to_hebrew_mcp
+          python -m build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: jibberish_to_hebrew_mcp/dist
